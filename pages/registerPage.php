@@ -11,6 +11,15 @@
 <body>
 <div class="register">
     <h1>Реєстрація</h1>
+    <h2>
+        <?php
+        switch ($_GET['error']) {
+            case 'user_already_registered':
+                echo('Користувач вже існує. Будь ласка, <a href="../pages/loginPage.php">увійдіть в акаунт</a>.');
+                break;
+        }
+        ?>
+    </h2>
     <form name="registerForm" action="../php/register.php" method="post">
         <label for="input-login">Логін:</label>
         <input id="input-login" type="text" name="login" required onChange="checkInput()">
