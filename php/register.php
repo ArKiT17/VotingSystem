@@ -27,7 +27,7 @@
         die("Error in SQL query: " . $mysqli->error);
     }
     if ($resultExistUser->fetch_assoc()['count'] > 0) {
-        echo('Користувач вже існує. Будь ласка, <a href="loginPahe.php">увійдіть в акаунт</a>.');
+        echo('Користувач вже існує. Будь ласка, <a href="../pages/loginPage.php">увійдіть в акаунт</a>.');
         exit();
     }
     $hashPass = password_hash($password, PASSWORD_BCRYPT);

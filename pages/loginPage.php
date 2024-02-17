@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Вхід в акаунт</title>
+    <link rel="stylesheet" href="../css/registerLogin.css">
+</head>
+<body>
+<div class="login">
+    <h1>Вхід</h1>
+    <h2>
+        <?php
+        session_start();
+        switch ($_GET['error']) {
+            case 'invalid_user':
+                echo('Користувача не знайдено. Будь ласка, <a href="../pages/registerPage.php">зареєструйтесь</a>.');
+                break;
+            case 'incorrect_password':
+                echo("Невірний пароль.");
+                break;
+        }
+        ?>
+    </h2>
+    <form action="../php/login.php" method="post">
+        <label for="input-login">Логін:</label>
+        <input id="input-login" type="text" name="login" required onChange="checkInput()">
+        <label for="input-password">Пароль:</label>
+        <input id="input-password" type="password" name="password" required onChange="checkInput()">
+        <button name="btn" id="submit-login" type="submit" disabled>Login</button>
+    </form>
+    <a href="registerPage.php">Ще не маєш акаунту? Зареєструватися.</a>
+</div>
+
+<script>
+    const button = document.getElementById('submit-login')
+    const inputLogin = document.getElementById('input-login')
+    const inputPassword = document.getElementById('input-password')
+
+    function checkInput() {
+        button.disabled = !(inputLogin.value !== '' &&
+            inputPassword.value !== '');
+    }
+</script>
+</body>
+</html>
