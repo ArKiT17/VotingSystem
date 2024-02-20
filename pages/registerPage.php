@@ -13,10 +13,8 @@
     <h1>Реєстрація</h1>
     <h2>
         <?php
-        switch ($_GET['error']) {
-            case 'user_already_registered':
-                echo('Користувач вже існує. Будь ласка, <a href="../pages/loginPage.php">увійдіть в акаунт</a>.');
-                break;
+        if ($_GET['error']) {
+            echo('Користувач вже існує. Будь ласка, <a href="../pages/loginPage.php">увійдіть в акаунт</a>.');
         }
         ?>
     </h2>
