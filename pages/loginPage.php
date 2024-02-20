@@ -13,15 +13,14 @@
     <h1>Вхід</h1>
     <h2>
         <?php
+        if (!isset($_SESSION['login']))
+            header("Location: ../pages/availableVotes.php");
+        const errors = array(
+            'invalid_user' => 'Користувача не знайдено. Будь ласка, <a href="../pages/registerPage.php">зареєструйтесь</a>.',
+            'incorrect_password' => 'Невірний пароль.'
+        );
         session_start();
-        switch ($_GET['error']) {
-            case 'invalid_user':
-                echo('Користувача не знайдено. Будь ласка, <a href="../pages/registerPage.php">зареєструйтесь</a>.');
-                break;
-            case 'incorrect_password':
-                echo("Невірний пароль.");
-                break;
-        }
+        echo(errors[$_GET['error']]);
         ?>
     </h2>
     <form action="../php/login.php" method="post">
