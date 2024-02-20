@@ -1,0 +1,58 @@
+@import "common.css";
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.control-box {
+    position: fixed;
+    right: 0;
+    height: 70px;
+    padding: 10px 0;
+    z-index: 1;
+    display: flex;
+    column-gap: 20px;
+}
+
+h1.title {
+    color: #fff;
+    flex: 1;
+}
+
+a.btn {
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin: 10px 0;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+a.btn:hover {
+    background-color: #0056b3;
+}
+
+a.btn:active {
+    background-color: #003366;
+}
+
+img.btn {
+    cursor: pointer;
+    height: 100%;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+
