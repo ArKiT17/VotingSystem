@@ -10,3 +10,11 @@ function login() {
         }
     });
 }
+
+function toVoted() {
+    window.location.href = "../pages/voted.php";
+}
+
+function toAvailable() {
+    window.location.href = "../pages/availableVotes.php";
+}

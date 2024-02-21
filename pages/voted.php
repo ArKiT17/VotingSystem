@@ -15,7 +15,7 @@
         if ($_SESSION['name'] !== null)
             echo($_SESSION['name']);
         ?></h3>
-    <h1 class="title">Активні голосування</h1>
+    <h1 class="title">Проголосовані</h1>
     <div class="control-box">
         <?php
         if ($_SESSION['role'] === '1')
@@ -27,8 +27,8 @@
         ?>
     </div>
 </header>
-<div class="to-inactive" onclick="toVoted()"></div>
-<main>
+<div class="to-available" onclick="toAvailable()"></div>
+<main class="voted-main">
 
 </main>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

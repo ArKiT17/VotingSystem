@@ -1,0 +1,44 @@
+@import "header.css";
+
+main {
+    height: calc(100vh - 90px);
+    margin-top: 90px;
+    width: calc(100% - 70px);
+}
+
+.voted-main {
+    background: grey;
+    margin-left: 70px;
+}
+
+.to-inactive, .to-available {
+    position: fixed;
+    top: 90px;
+    height: calc(100vh - 90px);
+    width: 70px;
+    transition: 0.4s ease;
+}
+
+.to-inactive {
+    right: 0;
+    background: grey;
+}
+
+.to-available {
+    left: 0;
+    background: yellow;
+}
+
+.to-inactive:hover, .to-available:hover {
+    cursor: pointer;
+    width: 130px;
+    transition: 0.4s ease;
+}
+
+.to-inactive:hover {
+    background: #5e5e5e;
+}
+
+.to-available:hover {
+    background: #575700;
+}
