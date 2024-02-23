@@ -13,7 +13,7 @@ if (!$result) {
     die("Error in SQL query: " . $mysqli->error);
 }
 if ($result->num_rows == 0) {
-    header("Location: ../pages/loginPage.php?error=invalid_user");
+    header("Location: ../pages/login.php?error=invalid_user");
     $mysqli->close();
     exit();
 }
@@ -26,7 +26,7 @@ if (password_verify($password, $row['password'])) {
     $_SESSION['role'] = $row['role'];
     header("Location: ../pages/availableVotes.php");
 } else {
-    header("Location: ../pages/loginPage.php?error=incorrect_password");
+    header("Location: ../pages/login.php?error=incorrect_password");
     $mysqli->close();
     exit();
 }

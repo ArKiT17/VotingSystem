@@ -14,7 +14,7 @@
     <h2>
         <?php
         if ($_GET['error']) {
-            echo('Користувач вже існує. Будь ласка, <a href="../pages/loginPage.php">увійдіть в акаунт</a>.');
+            echo('Користувач вже існує. Будь ласка, <a href="login.php">увійдіть в акаунт</a>.');
         }
         ?>
     </h2>
@@ -32,9 +32,11 @@
         <p id="errorName"></p>
         <button id="submit-register" type="button" onclick="validation()" disabled>Зареєструватися</button>
     </form>
-    <a class="link" href="loginPage.php">Вже маєш акаунт? Увійти.</a>
+    <a class="link" href="login.php">Вже маєш акаунт? Увійти.</a>
 </div>
-
+<footer>
+    <h3>© 2024. Всі права захищені.</h3>
+</footer>
 <script>
     const button = document.getElementById('submit-register')
     const inputLogin = document.getElementById('input-login')

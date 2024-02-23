@@ -1,7 +1,8 @@
 @import "header.css";
+@import "footer.css";
 
 main {
-    height: calc(100vh - 90px);
+    height: calc(100vh - 140px);
     margin-top: 90px;
     width: calc(100% - 70px);
 }
@@ -14,7 +15,7 @@ main {
 .to-inactive, .to-available {
     position: fixed;
     top: 90px;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 140px);
     width: 70px;
     transition: 0.4s ease;
 }

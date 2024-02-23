@@ -14,7 +14,7 @@ if (!$resultExistUser) {
     die("Error in SQL query: " . $mysqli->error);
 }
 if ($resultExistUser->fetch_assoc()['count'] > 0) {
-    header("Location: ../pages/registerPage.php?error=user_already_registered");
+    header("Location: ../pages/register.php?error=user_already_registered");
     exit();
 }
 $hashPass = password_hash($password, PASSWORD_BCRYPT);
@@ -23,7 +23,7 @@ $result = $mysqli->query($query);
 if (!$result) {
     die("Error in SQL query: " . $mysqli->error);
 } else {
-    header("Location: ../pages/loginPage.php");
+    header("Location: ../pages/login.php");
 }
 
 $mysqli->close();

@@ -1,0 +1,16 @@
+@import "common.css";
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: var(--layout-bg-color);
+    color: var(--layout-text-color);
+    text-align: center;
+    height: 50px;
+}
+
+footer h3 {
+    font-size: 1em;
+}

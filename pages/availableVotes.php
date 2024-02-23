@@ -19,7 +19,7 @@
     <div class="control-box">
         <?php
         if ($_SESSION['role'] === '1')
-            echo('<a class="btn" href="./admin.php"><span>Адмінпанель</span></a>');
+            echo('<a class="btn" href="addVote.php"><span>Додати голосування</span></a>');
         if ($_SESSION['login'] === null)
             echo('<img class="btn" src="../src/login.png" alt="Вхід" onclick="login()">');
         else
@@ -31,6 +31,9 @@
 <main>
 
 </main>
+<footer>
+    <h3>© 2024. Всі права захищені.</h3>
+</footer>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="../js/requests.js"></script>
 </body>

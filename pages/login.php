@@ -17,7 +17,7 @@
         if ($_SESSION['login'] !== null)
             header("Location: ../pages/availableVotes.php");
         const errors = array(
-            'invalid_user' => 'Користувача не знайдено. Будь ласка, <a href="../pages/registerPage.php">зареєструйтесь</a>.',
+            'invalid_user' => 'Користувача не знайдено. Будь ласка, <a href="register.php">зареєструйтесь</a>.',
             'incorrect_password' => 'Невірний пароль.'
         );
         echo(errors[$_GET['error']]);
@@ -30,9 +30,11 @@
         <input id="input-password" type="password" name="password" required onChange="checkInput()">
         <button name="btn" id="submit-login" type="submit" disabled>Login</button>
     </form>
-    <a href="registerPage.php">Ще не маєш акаунту? Зареєструватися.</a>
+    <a href="register.php">Ще не маєш акаунту? Зареєструватися.</a>
 </div>
-
+<footer>
+    <h3>© 2024. Всі права захищені.</h3>
+</footer>
 <script>
     const button = document.getElementById('submit-login')
     const inputLogin = document.getElementById('input-login')

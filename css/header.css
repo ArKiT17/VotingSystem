@@ -5,7 +5,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 70px;
-    background-color: #333;
+    background-color: var(--layout-bg-color);
     padding: 10px;
     position: fixed;
     top: 0;
@@ -17,7 +17,7 @@ header {
     position: fixed;
     left: 0;
     z-index: 1;
-    color: white;
+    color: var(--layout-text-color);
     margin-left: 2%;
 }
 
@@ -32,7 +32,7 @@ header {
 }
 
 h1.title {
-    color: #fff;
+    color: var(--layout-text-color);
     flex: 1;
 }
 
@@ -43,7 +43,7 @@ a.btn {
     align-items: center;
     padding: 0 20px;
     margin: 10px 0;
-    color: #fff;
+    color: var(--layout-text-color);
     background-color: #007bff;
     border-radius: 14px;
     cursor: pointer;
