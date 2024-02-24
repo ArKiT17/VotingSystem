@@ -20,15 +20,15 @@
     </h2>
     <form name="registerForm" action="../php/register.php" method="post">
         <label for="input-login">Логін:</label>
-        <input id="input-login" type="text" name="login" required onChange="checkInput()">
+        <input id="input-login" type="text" name="login" required oninput="checkInput()">
         <p id="errorLogin"></p>
         <label for="input-password">Пароль:</label>
-        <input id="input-password" type="password" name="password" required onChange="checkInput()">
+        <input id="input-password" type="password" name="password" required oninput="checkInput()">
         <label for="input-password-confirm">Підтвердження пароля:</label>
-        <input id="input-password-confirm" type="password" name="passwordConfirm" required onChange="checkInput()">
+        <input id="input-password-confirm" type="password" name="passwordConfirm" required oninput="checkInput()">
         <p id="errorPass"></p>
         <label for="input-name">Ім'я та прізвище:</label>
-        <input id="input-name" type="text" name="name" required onChange="checkInput()">
+        <input id="input-name" type="text" name="name" required oninput="checkInput()">
         <p id="errorName"></p>
         <button id="submit-register" type="button" onclick="validation()" disabled>Зареєструватися</button>
     </form>

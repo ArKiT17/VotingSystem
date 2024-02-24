@@ -25,9 +25,9 @@
     </h2>
     <form action="../php/login.php" method="post">
         <label for="input-login">Логін:</label>
-        <input id="input-login" type="text" name="login" required onChange="checkInput()">
+        <input id="input-login" type="text" name="login" required oninput="checkInput()">
         <label for="input-password">Пароль:</label>
-        <input id="input-password" type="password" name="password" required onChange="checkInput()">
+        <input id="input-password" type="password" name="password" required oninput="checkInput()">
         <button name="btn" id="submit-login" type="submit" disabled>Login</button>
     </form>
     <a href="register.php">Ще не маєш акаунту? Зареєструватися.</a>
