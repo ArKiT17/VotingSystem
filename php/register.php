@@ -1,8 +1,6 @@
 <?php
-$mysqli = new mysqli('localhost', 'root', '', 'voting');
-if ($mysqli->connect_error) {
-    die("Connection error: " . $mysqli->connect_error);
-}
+global $mysqli;
+include "./dbConnect.php";
 
 $login = $_POST['login'];
 $password = $_POST['password'];

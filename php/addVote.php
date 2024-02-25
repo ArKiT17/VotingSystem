@@ -3,10 +3,8 @@ if (!$_POST['name1']) {
     header("Location: ../pages/addVote.php");
     exit();
 }
-$mysqli = new mysqli('localhost', 'root', '', 'voting');
-if ($mysqli->connect_error) {
-    die("Connection error: " . $mysqli->connect_error);
-}
+global $mysqli;
+include "./dbConnect.php";
 
 $name = $_POST['voteName'];
 $description = $_POST['voteDesc'];
