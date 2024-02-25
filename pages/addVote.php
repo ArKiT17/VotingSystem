@@ -46,9 +46,7 @@
         <button type="submit">Створити голосування</button>
     </form>
 </main>
-<footer>
-    <h3>© 2024. Всі права захищені.</h3>
-</footer>
+<?php include "./components/footer.php" ?>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="../js/requests.js"></script>
 <script src="../js/addVote.js"></script>

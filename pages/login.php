@@ -32,9 +32,7 @@
     </form>
     <a href="register.php">Ще не маєш акаунту? Зареєструватися.</a>
 </div>
-<footer>
-    <h3>© 2024. Всі права захищені.</h3>
-</footer>
+<?php include "./components/footer.php" ?>
 <script>
     const button = document.getElementById('submit-login')
     const inputLogin = document.getElementById('input-login')

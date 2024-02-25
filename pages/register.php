@@ -34,9 +34,7 @@
     </form>
     <a class="link" href="login.php">Вже маєш акаунт? Увійти.</a>
 </div>
-<footer>
-    <h3>© 2024. Всі права захищені.</h3>
-</footer>
+<?php include "./components/footer.php" ?>
 <script>
     const button = document.getElementById('submit-register')
     const inputLogin = document.getElementById('input-login')
