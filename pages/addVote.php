@@ -37,7 +37,6 @@
         <label for="voteEndTime">
             Кінець голосування
             <input type="datetime-local" id="voteEndTime" name="voteEndTime" required>
-            <input type="hidden" id="t" name="t">
         </label>
         <hr>
         <div id="candidates"></div>
@@ -48,7 +47,6 @@
 </main>
 <?php include "./components/footer.php" ?>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../js/requests.js"></script>
 <script src="../js/addVote.js"></script>
 </body>
 </html>

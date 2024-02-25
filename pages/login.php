@@ -28,6 +28,7 @@
         <input id="input-login" type="text" name="login" required oninput="checkInput()">
         <label for="input-password">Пароль:</label>
         <input id="input-password" type="password" name="password" required oninput="checkInput()">
+        <input id="t" type="hidden" name="t">
         <button name="btn" id="submit-login" type="submit" disabled>Login</button>
     </form>
     <a href="register.php">Ще не маєш акаунту? Зареєструватися.</a>
@@ -42,6 +43,11 @@
         button.disabled = !(inputLogin.value !== '' &&
             inputPassword.value !== '');
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const date = new Date;
+        document.getElementById('t').value = date.getTimezoneOffset() / 60
+    });
 </script>
 </body>
 </html>

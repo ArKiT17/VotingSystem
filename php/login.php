@@ -22,6 +22,7 @@ if (password_verify($password, $row['password'])) {
     $_SESSION['login'] = $row['login'];
     $_SESSION['name'] = $row['name'];
     $_SESSION['role'] = $row['role'];
+    $_SESSION['t'] = $_POST['t'];
     header("Location: ../pages/availableVotes.php");
 } else {
     header("Location: ../pages/login.php?error=incorrect_password");

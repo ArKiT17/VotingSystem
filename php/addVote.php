@@ -10,7 +10,7 @@ $name = $_POST['voteName'];
 $description = $_POST['voteDesc'];
 try {
     $endDateTime = new DateTime(str_replace("T", " ", $_POST['voteEndTime']) . ":00");
-    $zone = (int)$_POST['t'];
+    $zone = $_SESSION['t'];
     if ($zone < 0)
         $endDateTime->sub(new DateInterval('PT' . -$zone . 'H'));
     else
