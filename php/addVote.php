@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!$_POST['name1']) {
     header("Location: ../pages/addVote.php");
     exit();
@@ -45,4 +46,5 @@ if (!$mysqli->query($query))
     die("Error in SQL query: " . $mysqli->error);
 
 $mysqli->close();
+header("Location: ../pages/availableVotes.php");
 ?>
