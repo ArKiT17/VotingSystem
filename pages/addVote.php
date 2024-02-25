@@ -25,7 +25,7 @@
     </div>
 </header>
 <main>
-    <form action="../php/addVote.php" method="post">
+    <form action="../php/addVote.php" method="post" enctype="multipart/form-data">
         <label for="voteName">
             Заголовок
             <input type="text" id="voteName" name="voteName" required maxlength="40">
@@ -33,6 +33,11 @@
         <label for="voteDesc">
             Опис (максимум 100 символів)
             <input type="text" id="voteDesc" name="voteDesc" required maxlength="100">
+        </label>
+        <label for="voteEndTime">
+            Кінець голосування
+            <input type="datetime-local" id="voteEndTime" name="voteEndTime" required>
+            <input type="hidden" id="t" name="t">
         </label>
         <hr>
         <div id="candidates"></div>

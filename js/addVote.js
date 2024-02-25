@@ -51,3 +51,8 @@ function addCandidate() {
 
     candidates.appendChild(newCandidate)
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const date = new Date;
+    document.getElementById('t').value = date.getTimezoneOffset() / 60
+});
