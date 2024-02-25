@@ -1,7 +1,7 @@
 <div class="cards">
     <?php
     global $mysqli;
-    include "../php/dbConnect.php"; // "../../php/dbConnect.php" ???
+    include "../php/dbConnect.php";
 
     $currentDateTime = new DateTime;
     $currentDateTime->setTimezone(new DateTimeZone('UTC'));
@@ -12,7 +12,7 @@
         die("Error in SQL query: " . $mysqli->error);
     }
     while ($row = $result->fetch_assoc()) {
-        echo "<div class='card' onclick='open(" . $row['id'] . ")'>";
+        echo "<div class='card' onclick=\"toVote(" . $row['id'] . ")\">";
         echo "<h3>" . $row['name'] . "</h3>";
         echo "<h5>" . $row['description'] . "</h5>";
         try {

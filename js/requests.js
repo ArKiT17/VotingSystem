@@ -19,6 +19,6 @@ function toAvailable() {
     window.location.href = "../pages/availableVotes.php";
 }
 
-function open(voteId) {
+function toVote(voteId) {
     window.location.href = `../pages/vote.php?id=${voteId}`;
 }
