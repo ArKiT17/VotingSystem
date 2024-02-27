@@ -14,16 +14,7 @@
     ?>
 </head>
 <body>
-<header>
-    <h3 class="name"><?php
-        echo($_SESSION['name']);
-        ?></h3>
-    <h1 class="title">Нове голосування</h1>
-    <div class="control-box">
-        <a class="btn" href="./availableVotes.php"><span>Активні голосування</span></a>
-        <img class="btn" src="../src/logout.png" alt="Вихід" onclick="login()">
-    </div>
-</header>
+<?php include "./components/header.php" ?>
 <main>
     <form action="../php/addVote.php" method="post" enctype="multipart/form-data">
         <label for="voteName">

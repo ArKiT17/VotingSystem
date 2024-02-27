@@ -9,24 +9,7 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-<header>
-    <h3 class="name"><?php
-        session_start();
-        if ($_SESSION['name'] !== null)
-            echo($_SESSION['name']);
-        ?></h3>
-    <h1 class="title">Активні голосування</h1>
-    <div class="control-box">
-        <?php
-        if ($_SESSION['role'] === '1')
-            echo('<a class="btn" href="addVote.php"><span>Додати голосування</span></a>');
-        if ($_SESSION['login'] === null)
-            echo('<img class="btn" src="../src/login.png" alt="Вхід" onclick="login()">');
-        else
-            echo('<img class="btn" src="../src/logout.png" alt="Вихід" onclick="login()">');
-        ?>
-    </div>
-</header>
+<?php include "./components/header.php" ?>
 <div class="to-inactive" onclick="toVoted()"></div>
 <main>
 <?php include "./components/voteCards.php" ?>
