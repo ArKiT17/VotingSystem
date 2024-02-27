@@ -22,3 +22,7 @@ function toAvailable() {
 function toVote(voteId) {
     window.location.href = `../pages/vote.php?id=${voteId}`;
 }
+
+// function selectThis(candidateId) {
+//     console.log(`selected ${candidateId}`)
+// }

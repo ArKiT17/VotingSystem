@@ -1,0 +1,7 @@
+@import "header.css";
+@import "footer.css";
+
+main {
+    height: calc(100vh - 140px);
+    margin-top: 90px;
+}
