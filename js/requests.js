@@ -1,7 +1,8 @@
 function login() {
     $.ajax({
-        url: "../php/actions.php?action=login",
-        type: "GET",
+        url: "../php/actions.php",
+        type: "POST",
+        data: { action: 'login' },
         success: () => {
             window.location.href = "../pages/login.php";
         },
@@ -23,6 +24,16 @@ function toVote(voteId) {
     window.location.href = `../pages/vote.php?id=${voteId}`;
 }
 
-// function selectThis(candidateId) {
-//     console.log(`selected ${candidateId}`)
-// }
+function selectThis(votingId, candidateId) {
+    $.ajax({
+        url: `../php/actions.php`,
+        type: "POST",
+        data: { action: 'vote', votingId: votingId, candidateId: candidateId },
+        success: () => {
+            window.location.href = "../pages/availableVotes.php";
+        },
+        error: (xhr, status, error) => {
+            console.error("AJAX Error: " + status + " - " + error);
+        }
+    });
+}

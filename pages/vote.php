@@ -1,7 +1,8 @@
 <?php
 global $mysqli;
 include "../php/dbConnect.php";
-$result = $mysqli->query("select count(id) as c from voting where id = {$_GET['id']}");
+$voteId = $_GET['id'];
+$result = $mysqli->query("select count(id) as c from voting where id = $voteId");
 if (!$result)
     die("Error in SQL query: {$mysqli->error}");
 
