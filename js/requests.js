@@ -20,8 +20,12 @@ function toAvailable() {
     window.location.href = "../pages/availableVotes.php";
 }
 
-function toVote(voteId) {
+function openVote(voteId) {
     window.location.href = `../pages/vote.php?id=${voteId}`;
+}
+
+function openVoted(voteId) {
+    window.location.href = `../pages/votedCard.php?id=${voteId}`;
 }
 
 function selectThis(votingId, candidateId) {
