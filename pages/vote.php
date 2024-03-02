@@ -11,7 +11,7 @@ $isVoted = (int)$_GET['v'];
 if ($isVoted)
     $result = $mysqli->query("select count(*) as c from userVotes where userLogin like '{$_SESSION['login']}' and votingId = $voteId and isVoted = 1");
 else
-    $result = $mysqli->query("select count(id) as c from voting where id = $voteId");
+    $result = $mysqli->query("select count(*) as c from voting where id = $voteId and id not in (select votingId from userVotes where userLogin like '{$_SESSION['login']}')");
 if (!$result)
     die("Error in SQL query: {$mysqli->error}");
 
@@ -33,9 +33,9 @@ if ((int)$result->fetch_assoc()['c'] == 0) {
     <title>Голосування</title>
     <?php
     if ($isVoted)
-        echo "<link rel='stylesheet' href='../css/openVote.css'>";
-    else
         echo "<link rel='stylesheet' href='../css/openVoted.css'>";
+    else
+        echo "<link rel='stylesheet' href='../css/openVote.css'>";
     ?>
 </head>
 <body>
