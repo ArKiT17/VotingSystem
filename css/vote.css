@@ -2,6 +2,40 @@
 @import "footer.css";
 
 main {
-    height: calc(100vh - 140px);
+    min-height: calc(100vh - 142px);
     margin-top: 90px;
+    background-color: var(--layout-bg-main-color);
+}
+
+.candidates {
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.candidate {
+    width: 300px;
+    background-color: var(--layout-bg-color);
+    border-radius: 15px;
+}
+
+.candidate img {
+    width: 74%;
+    height: 300px;
+    object-fit: cover;
+    margin: 10px 13% 0;
+    border-radius: 15px;
+}
+
+.candidate h3 {
+    margin: 10px;
+    text-align: center;
+    color: var(--layout-text-color-light);
+}
+
+.candidate h5 {
+    margin: 0 20px 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    color: var(--layout-text-color-dark);
 }

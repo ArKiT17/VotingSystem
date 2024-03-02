@@ -2,6 +2,6 @@
 @import "footer.css";
 
 main {
-    height: calc(100vh - 140px);
+    height: calc(100vh - 142px);
     margin-top: 90px;
 }

@@ -1,6 +1,9 @@
 :root {
-    --layout-bg-color: #333;
-    --layout-text-color: white;
+    --layout-bg-color: #EAE7DC;
+    --layout-bg-main-color: #F1E1A6;
+    --layout-text-color-light: #E85A4F;
+    --layout-text-color-dark: #72716e;
+    --font-style: "Convergence", sans-serif;
 }
 
 body, html {

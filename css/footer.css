@@ -1,16 +1,19 @@
 @import "common.css";
 
 footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*left: 0;*/
     background: var(--layout-bg-color);
-    color: var(--layout-text-color);
     text-align: center;
-    height: 50px;
+    height: 20px;
+    padding: 16px 0;
 }
 
 footer h3 {
-    font-size: 1em;
+    font-size: 16px;
+    color: var(--layout-text-color-dark);
+    font-family: var(--font-style);
+    margin: 0;
 }

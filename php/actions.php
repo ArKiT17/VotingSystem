@@ -7,7 +7,7 @@ switch ($_POST['action']) {
     case 'vote' :
         global $mysqli;
         include "./dbConnect.php";
-        $mysqli->query("insert into userVotes value ('{$_SESSION['login']}', {$_GET['votingId']}, true, {$_GET['candidateId']})");
+        $mysqli->query("insert into userVotes value ('{$_SESSION['login']}', {$_POST['votingId']}, true, {$_POST['candidateId']})");
         break;
 }
 ?>
