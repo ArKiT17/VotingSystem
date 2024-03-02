@@ -21,11 +21,11 @@ function toAvailable() {
 }
 
 function openVote(voteId) {
-    window.location.href = `../pages/vote.php?id=${voteId}`;
+    window.location.href = `../pages/vote.php?id=${voteId}&v=0`;
 }
 
 function openVoted(voteId) {
-    window.location.href = `../pages/votedCard.php?id=${voteId}`;
+    window.location.href = `../pages/vote.php?id=${voteId}&v=1`;
 }
 
 function selectThis(votingId, candidateId) {
