@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!$_SESSION['login']) {
+    header("Location: ../pages/login.php");
+    exit();
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,9 +17,9 @@
 </head>
 <body>
 <?php include "./components/header.php" ?>
-<div class="to-available" onclick="toAvailable()"></div>
 <main class="voted-main">
-<?php include "./components/voteCards.php" ?>
+    <div class="to-available" onclick="toAvailable()"></div>
+    <?php include "./components/voteCards.php" ?>
 </main>
 <?php include "./components/footer.php" ?>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

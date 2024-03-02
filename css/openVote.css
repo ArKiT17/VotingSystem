@@ -5,6 +5,7 @@ main {
     min-height: calc(100vh - 142px);
     margin-top: 90px;
     background-color: var(--layout-bg-main-color);
+    background: var(--layout-bg-main-gradient);
 }
 
 .candidates {
