@@ -41,3 +41,17 @@ function selectThis(votingId, candidateId) {
         }
     });
 }
+
+function deleteVote(votingId) {
+    $.ajax({
+        url: `../php/actions.php`,
+        type: "POST",
+        data: { action: 'deleteVote', votingId: votingId },
+        success: () => {
+            location.reload();
+        },
+        error: (xhr, status, error) => {
+            console.error("AJAX Error: " + status + " - " + error);
+        }
+    });
+}
