@@ -34,7 +34,7 @@
             echo "<h5>Time error</h5>";
         }
         if ($_SESSION['role'] == 1)
-            echo "<img src='../src/remove.svg' alt='Видалити' onclick='deleteVote({$row['id']})'>";
+            echo "<img src='../src/remove.svg' alt='Видалити' onclick='deleteVote(event, {$row['id']})'>";
         echo "</div>";
     }
 
