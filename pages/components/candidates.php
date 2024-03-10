@@ -17,11 +17,14 @@
             else
                 echo "<div class='candidate'>";
         else
-            echo "<div class='candidate' onclick='selectThis($voteId, {$row['id']})'>";
+            echo "<div class='candidate'>";
         $imageDataUri = 'data:image/jpeg;base64,' . base64_encode($row['photo']);
         echo "<img src='$imageDataUri' alt='{$row['name']}'/>";
         echo "<h3>{$row['name']}</h3>";
         echo "<h5>{$row['description']}</h5>";
+        echo "<div class='btn-area'>";
+        echo "<div class='btn' onclick='selectThis($voteId, {$row['id']})'>Обрати</div>";
+        echo "</div>";
         echo "</div>";
     }
 

@@ -5,6 +5,7 @@
     --layout-text-color-light: #E85A4F;
     --layout-text-color-dark: #72716e;
     --font-style: "Convergence", sans-serif;
+    --font-style-cyrillic: "Ubuntu", sans-serif;
 }
 
 body, html {

@@ -14,7 +14,7 @@ if ($path == 'vote.php') {
         $headers['vote.php'] = 'SQL Error';
 }
 ?>
-<link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Convergence&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <header>
     <h3 class="name"><?php
         session_start();

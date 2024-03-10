@@ -18,6 +18,7 @@ main {
     width: 300px;
     background-color: var(--layout-bg-color);
     border-radius: 15px;
+    position: relative;
 }
 
 .candidate img {
@@ -39,4 +40,47 @@ main {
     overflow-wrap: break-word;
     word-wrap: break-word;
     color: var(--layout-text-color-dark);
+    transition: 0.3s;
+}
+
+.candidate .btn-area {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    transition: 0.3s;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.candidate:hover .btn-area {
+    height: 45px;
+}
+
+.candidate:hover h5 {
+    color: var(--layout-bg-color);
+}
+
+.candidate:hover {
+    box-shadow: 0 0 20px var(--layout-text-color-light);
+}
+
+.candidate .btn-area .btn {
+    height: 70%;
+    text-align: center;
+    font-style: var(--font-style-cyrillic);
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: rgb(241,225,166);
+    background: linear-gradient(135deg, rgba(241,225,166,1) 0%, rgba(232,90,79,1) 100%);
+    border-radius: 15px;
+    cursor: pointer;
 }
