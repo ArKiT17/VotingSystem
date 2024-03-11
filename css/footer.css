@@ -5,7 +5,7 @@ footer {
     /*bottom: 0;*/
     /*right: 0;*/
     /*left: 0;*/
-    background: var(--layout-bg-color);
+    background: var(--layout-bg-color-main-page);
     text-align: center;
     height: 20px;
     padding: 16px 0;

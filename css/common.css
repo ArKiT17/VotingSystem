@@ -1,5 +1,7 @@
 :root {
-    --layout-bg-color: #EAE7DC;
+    --layout-bg-color-main-page: #F1E1A6;
+    --past-color: #D8C3A5;
+    --present-color: #EAE7DC;
     --layout-bg-main-color: #F1E1A6;
     --layout-bg-main-gradient: radial-gradient(circle, rgba(241,225,166,1) 0%, rgba(216,195,165,1) 100%);
     --layout-text-color-light: #E85A4F;
@@ -15,8 +17,6 @@ body, html {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f7f4;
-    color: #333;
 }
 
 h1 {
@@ -24,7 +24,6 @@ h1 {
 }
 
 h1, h2, a {
-    color: #2c7873;
     text-align: center;
 }
 

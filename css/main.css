@@ -6,41 +6,105 @@ main {
     margin-top: 90px;
     width: 100%;
     display: flex;
+    background-color: var(--present-color);
 }
 
 .voted-main {
-    background: grey;
+    background: var(--past-color);
 }
 
 .to-inactive, .to-available {
     height: calc(100vh - 142px);
     width: 70px;
+    display: flex;
+    justify-content: center;
     transition: 0.4s ease;
 }
 
 .to-inactive {
-    background: grey;
+    background: var(--past-color);
 }
 
 .to-available {
-    background: yellow;
+    background: var(--present-color);
 }
 
 .to-inactive:hover, .to-available:hover {
     cursor: pointer;
     width: 130px;
-    transition: 0.4s ease;
 }
 
-.to-inactive:hover {
-    background: #5e5e5e;
-}
-
-.to-available:hover {
-    background: #575700;
+.arrow {
+    height: auto;
+    width: 60%;
 }
 
 .cards {
-    height: 100%;
+    height: calc(100% - 20px);
     flex: 1;
+    margin: 20px 50px 0;
+}
+
+.card {
+    background-color: #E8D3B5;
+    padding: 10px;
+    display: grid;
+    grid-template:
+            "title title title control"
+            "desc people timer control";
+    grid-template-columns: calc(50% - 80px) 20% 30% 50px;
+    column-gap: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    scale: 1.015;
+}
+
+.card * {
+    margin: 0;
+}
+
+.card .title {
+    grid-area: title;
+    color: var(--layout-text-color-light);
+    font-size: 28px;
+}
+
+.card .description {
+    grid-area: desc;
+    color: var(--layout-text-color-dark);
+    font-size: 20px;
+    width: 100%;
+    text-wrap: normal;
+}
+
+.card .people {
+    grid-area: people;
+    color: var(--layout-text-color-light);
+    font-size: 20px;
+}
+
+.card .end-time {
+    grid-area: timer;
+    color: var(--layout-text-color-light);
+    font-size: 20px;
+}
+
+.card .control {
+    grid-area: control;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .control img {
+    width: 40px;
+}
+
+.voted-main .card {
+    background-color: #E3E0D4;
 }

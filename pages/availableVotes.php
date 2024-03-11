@@ -13,8 +13,11 @@
 <main>
     <?php
     include "./components/voteCards.php";
-    if ($_SESSION['login'])
-        echo "<div class='to-inactive' onclick='toVoted()'></div>";
+    if ($_SESSION['login']) {
+        echo "<div class='to-inactive' onclick='toVoted()'>";
+        echo "<img class='btn arrow' src='../src/toInactive.svg' alt='to voted'>";
+        echo "</div>";
+    }
     ?>
 </main>
 <?php include "./components/footer.php" ?>

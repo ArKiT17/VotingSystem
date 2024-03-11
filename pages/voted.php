@@ -18,7 +18,9 @@ if (!$_SESSION['login']) {
 <body>
 <?php include "./components/header.php" ?>
 <main class="voted-main">
-    <div class="to-available" onclick="toAvailable()"></div>
+    <div class="to-available" onclick="toAvailable()">
+        <img class='btn arrow' src='../src/toActive.svg' alt='to votes'>
+    </div>
     <?php include "./components/voteCards.php" ?>
 </main>
 <?php include "./components/footer.php" ?>
