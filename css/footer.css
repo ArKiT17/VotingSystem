@@ -9,6 +9,7 @@ footer {
     text-align: center;
     height: 20px;
     padding: 16px 0;
+    position: relative;
 }
 
 footer h3 {

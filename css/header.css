@@ -45,6 +45,11 @@ img.btn {
     height: 100%;
     margin: 0 10px;
     border-radius: 50%;
+    transition: 0.3s;
+}
+
+img.btn:hover {
+    scale: 1.08;
 }
 
 img.btn.exit {
@@ -55,4 +60,9 @@ img.btn.exit {
 img.btn.add-vote {
     background: var(--layout-bg-main-color);
     background: var(--button-gradient);
+}
+
+img.btn.clock {
+    padding: 5px;
+    box-sizing: border-box;
 }

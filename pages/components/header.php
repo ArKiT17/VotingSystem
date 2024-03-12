@@ -31,8 +31,10 @@ if ($path == 'vote.php') {
                 echo('<img class="btn add-vote" src="../src/add.svg" alt="Додати голосування" onclick="addVote(1)">');
         if ($_SESSION['login'] === null)
             echo('<img class="btn exit" src="../src/login.svg" alt="Вхід" onclick="login()">');
-        else
+        else {
+            echo('<img class="btn add-vote clock" src="../src/clock.svg" alt="До архіву">');
             echo('<img class="btn exit" src="../src/logout.svg" alt="Вихід" onclick="login()">');
+        }
         ?>
     </div>
 </header>

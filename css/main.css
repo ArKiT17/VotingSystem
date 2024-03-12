@@ -2,7 +2,7 @@
 @import "footer.css";
 
 main {
-    height: calc(100vh - 142px);
+    min-height: calc(100vh - 142px);
     margin-top: 90px;
     width: 100%;
     display: flex;
@@ -14,7 +14,6 @@ main {
 }
 
 .to-inactive, .to-available {
-    height: calc(100vh - 142px);
     width: 70px;
     display: flex;
     justify-content: center;
@@ -23,10 +22,12 @@ main {
 
 .to-inactive {
     background: var(--past-color);
+    right: 0;
 }
 
 .to-available {
     background: var(--present-color);
+    left: 0;
 }
 
 .to-inactive:hover, .to-available:hover {
@@ -35,8 +36,11 @@ main {
 }
 
 .arrow {
-    height: auto;
-    width: 60%;
+    height: 42px !important;
+    width: 42px !important;
+    border-radius: 0 !important;
+    position: fixed;
+    top: calc(50% - 21px);
 }
 
 .cards {
