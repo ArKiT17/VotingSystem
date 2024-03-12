@@ -25,8 +25,10 @@ if ($path == 'vote.php') {
     <div class="control-box">
         <?php
         if ($_SESSION['role'] === '1')
-            echo('<a class="btn" href="' . ($path == 'addVote.php' ? './availableVotes.php' : './addVote.php')
-                . '"><img class="btn add-vote" src="../src/add.svg" alt="Додати голосування""></a>');
+            if ($path == "addVote.php")
+                echo('<img class="btn add-vote" src="../src/close.svg" alt="До голосувань" onclick="addVote(0)">');
+            else
+                echo('<img class="btn add-vote" src="../src/add.svg" alt="Додати голосування" onclick="addVote(1)">');
         if ($_SESSION['login'] === null)
             echo('<img class="btn exit" src="../src/login.svg" alt="Вхід" onclick="login()">');
         else

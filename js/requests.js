@@ -12,6 +12,13 @@ function login() {
     });
 }
 
+function addVote(page) {
+    if (page === 1)
+        window.location.href = "../pages/addVote.php"
+    else
+        window.location.href = "../pages/availableVotes.php"
+}
+
 function toVoted() {
     window.location.href = "../pages/voted.php";
 }

@@ -31,12 +31,7 @@ if ((int)$result->fetch_assoc()['c'] == 0) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Голосування</title>
-    <?php
-    if ($isVoted)
-        echo "<link rel='stylesheet' href='../css/openVoted.css'>";
-    else
-        echo "<link rel='stylesheet' href='../css/openVote.css'>";
-    ?>
+    <link rel='stylesheet' href='../css/openVote.css'>
 </head>
 <body>
 <?php include "./components/header.php" ?>

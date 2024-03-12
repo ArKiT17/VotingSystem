@@ -5,7 +5,10 @@ main {
     min-height: calc(100vh - 142px);
     margin-top: 90px;
     background-color: var(--layout-bg-main-color);
-    background: var(--layout-bg-main-gradient);
+}
+
+header, footer {
+    background-color: var(--present-color);
 }
 
 .candidates {
@@ -16,9 +19,10 @@ main {
 
 .candidate {
     width: 300px;
-    background-color: var(--layout-bg-color);
+    background-color: var(--present-color);
     border-radius: 15px;
     position: relative;
+    transition: 0.3s;
 }
 
 .candidate img {
@@ -40,7 +44,7 @@ main {
     overflow-wrap: break-word;
     word-wrap: break-word;
     color: var(--layout-text-color-dark);
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 .candidate .btn-area {
@@ -58,15 +62,15 @@ main {
     align-items: center;
 }
 
-.candidate:hover .btn-area {
+.vote-anim:hover .btn-area {
     height: 45px;
 }
 
-.candidate:hover h5 {
-    color: var(--layout-bg-color);
+.vote-anim:hover h5 {
+    color: var(--present-color);
 }
 
-.candidate:hover {
+.vote-anim:hover {
     box-shadow: 0 0 20px var(--layout-text-color-light);
 }
 
@@ -79,8 +83,30 @@ main {
     display: flex;
     align-items: center;
     padding: 0 20px;
-    background: rgb(241,225,166);
-    background: linear-gradient(135deg, rgba(241,225,166,1) 0%, rgba(232,90,79,1) 100%);
+    background: var(--layout-bg-main-color);
+    background: var(--button-gradient);
     border-radius: 15px;
     cursor: pointer;
+}
+
+.chosen {
+    box-shadow: 0 0 20px var(--layout-text-color-light);
+}
+
+.chosen .btn-area {
+    height: 45px;
+}
+
+.chosen h5 {
+    color: var(--present-color);
+}
+
+.image-btn {
+    height: 22px !important;
+    width: 22px !important;
+    background: var(--layout-bg-main-color);
+    background: var(--button-gradient);
+    border-radius: 50% !important;
+    padding: 10px;
+    margin: 0 !important;
 }

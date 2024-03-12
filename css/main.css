@@ -47,7 +47,7 @@ main {
 
 .card {
     background-color: #E8D3B5;
-    padding: 10px;
+    padding: 16px;
     display: grid;
     grid-template:
             "title title title control"
