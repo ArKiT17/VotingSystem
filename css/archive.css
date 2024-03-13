@@ -1,0 +1,77 @@
+@import "header.css";
+@import "footer.css";
+
+header, footer, .card {
+    background-color: var(--past-color);
+}
+
+main {
+    min-height: calc(100vh - 142px);
+    margin-top: 90px;
+    width: 100%;
+    background-color: #B19772;
+}
+
+.cards {
+    padding: 25px 50px;
+    display: flex;
+    gap: 49px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    background-color: #E8D3B5;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    min-width: 20%;
+    border-radius: 15px;
+}
+
+.card:hover {
+    scale: 1.03;
+}
+
+.card * {
+    margin: 0;
+}
+
+.card img {
+    width: 74%;
+    height: 250px;
+    object-fit: cover;
+    margin: 0 13%;
+    border-radius: 15px;
+}
+
+.card .title {
+    grid-area: title;
+    color: var(--layout-text-color-light);
+    font-size: 26px;
+    font-family: var(--font-style-cyrillic);
+    font-weight: normal;
+}
+
+.title-winner, .winner-name, .vote-count {
+    font-family: var(--font-style-cyrillic);
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.title-winner {
+    color: var(--layout-text-color-light);
+    font-weight: bold;
+}
+
+.winner-name {
+    color: white;
+}
+
+.vote-count {
+    color: var(--text-color-count-votes);
+}

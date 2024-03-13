@@ -4,7 +4,8 @@ $path = pathinfo(parse_url($_SERVER['REQUEST_URI'])['path'], PATHINFO_BASENAME);
 $headers = array(
     'addVote.php' => 'Нове голосування',
     'availableVotes.php' => 'Активні голосування',
-    'voted.php' => 'Проголосовані'
+    'voted.php' => 'Проголосовані',
+    'archive.php' => 'Архів'
 );
 if ($path == 'vote.php') {
     $result = $mysqli->query("select `name` from `voting` where `id` = {$_GET['id']}"); //OK
@@ -32,7 +33,7 @@ if ($path == 'vote.php') {
         if ($_SESSION['login'] === null)
             echo('<img class="btn exit" src="../src/login.svg" alt="Вхід" onclick="login()">');
         else {
-            echo('<img class="btn add-vote clock" src="../src/clock.svg" alt="До архіву">');
+            echo('<img class="btn add-vote clock" src="../src/clock.svg" alt="До архіву" onclick="toArchive()">');
             echo('<img class="btn exit" src="../src/logout.svg" alt="Вихід" onclick="login()">');
         }
         ?>

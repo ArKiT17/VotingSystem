@@ -35,6 +35,14 @@ function openVoted(voteId) {
     window.location.href = `../pages/vote.php?id=${voteId}&v=1`;
 }
 
+function toArchive() {
+    window.location.href = `../pages/archive.php`;
+}
+
+function openArchiveVote(voteId) {
+    window.location.href = `../pages/archiveVote.php?id=${voteId}`;
+}
+
 function selectThis(votingId, candidateId) {
     $.ajax({
         url: `../php/actions.php`,

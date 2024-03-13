@@ -1,15 +1,10 @@
-@import "common.css";
-
 footer {
-    /*position: fixed;*/
-    /*bottom: 0;*/
-    /*right: 0;*/
-    /*left: 0;*/
     background: var(--layout-bg-color-main-page);
     text-align: center;
     height: 20px;
     padding: 16px 0;
     position: relative;
+    z-index: 1;
 }
 
 footer h3 {
