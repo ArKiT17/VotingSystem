@@ -1,55 +1,89 @@
 @import "header.css";
 @import "footer.css";
 
-.link {
-    text-decoration: none;
-    display: block;
+main {
+    min-height: calc(100vh - 142px);
+    margin-top: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
 
-.register, .login {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+p {
+    margin: 5px 0 10px;
+    color: var(--layout-text-color-light);
 }
 
-form {
-    margin-top: 20px;
+.form {
+    font-family: var(--font-style-cyrillic);
+    background-color: #FFFAEA;
+    width: 25%;
+    margin: 20px 50px;
+    padding: 10px 40px;
+    border-radius: 15px;
+    border: 8px solid var(--layout-bg-main-color);
+}
+
+.form h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.form h2 .link {
+    display: inline;
 }
 
 label {
+    font-size: 1.3em;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-input,
-select {
+input {
     width: 100%;
     padding: 8px;
     border-radius: 4px;
     box-sizing: border-box;
-    border: 1px solid grey;
-    margin-bottom: 15px;
+    border: none;
+    font-size: 1em;
+    background-color: var(--color-light-grey);
+    outline: none;
 }
 
-button, .btn {
-    background-color: #2c7873;
-    color: #fff;
-    padding: 10px 15px;
-    margin-bottom: 15px;
+button {
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-radius: 15px;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: 0.3s;
+    padding: 10px 20px;
+    display: block;
+    margin: 0 auto 16px;
+    background: var(--enable-button-color);
+    background: var(--enable-button-gradient);
 }
 
-button:hover {
-    background-color: #1d524e;
+button:disabled {
+    background: var(--disable-button-color);
+    background: var(--disable-button-gradient);
 }
 
 button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+.link {
+    color: var(--text-color-count-votes);
+    text-decoration: none;
+    display: block;
+    font-size: 1.1em;
+}
+
+.link:hover {
+    color: var(--layout-text-color-light);
 }
