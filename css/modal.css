@@ -1,0 +1,65 @@
+@import "common.css";
+
+#modal {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalBox {
+    width: 35%;
+    height: 20%;
+    background-color: #FFFAEA;
+    border-radius: 15px;
+    border: 8px solid var(--text-color-count-votes);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalBox h1 {
+    margin: 0 0 30px;
+    font-family: var(--font-style-cyrillic);
+}
+
+#buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#buttons button {
+    color: white;
+    min-width: 20%;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 6px 0;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#buttons button:hover {
+    scale: 1.05;
+}
+
+#button-yes {
+    background: var(--layout-bg-main-color);
+    background: var(--button-gradient);
+}
+
+#button-no {
+    background: rgb(234,231,220);
+    background: linear-gradient(135deg, rgba(234,231,220,1) 0%, rgba(128,128,128,1) 100%);
+}

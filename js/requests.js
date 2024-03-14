@@ -81,20 +81,32 @@ function showModal(text, yesFunction) {
     const modal = document.createElement('div')
     modal.id = 'modal'
 
+    const modalBox = document.createElement('div')
+    modalBox.id = 'modalBox'
+
     const title = document.createElement('h1')
     title.innerHTML = text
     const buttons = document.createElement('div')
+    buttons.id = 'buttons'
 
     const buttonYes = document.createElement('button')
     buttonYes.innerHTML = 'Так'
+    buttonYes.id = 'button-yes'
     buttonYes.addEventListener('click', yesFunction)
     const buttonNo = document.createElement('button')
     buttonNo.innerHTML = 'Ні'
-    buttonNo.addEventListener('click', () => document.getElementsByTagName('header')[0].removeChild(modal))
+    buttonNo.id = 'button-no'
+    buttonNo.addEventListener('click', () => document.getElementsByTagName('body')[0].removeChild(modal))
 
     buttons.appendChild(buttonYes)
     buttons.appendChild(buttonNo)
-    modal.appendChild(title)
-    modal.appendChild(buttons)
-    document.getElementsByTagName('header')[0].appendChild(modal)
+    modalBox.appendChild(title)
+    modalBox.appendChild(buttons)
+    modal.appendChild(modalBox)
+    document.getElementsByTagName('body')[0].insertBefore(modal, document.getElementsByTagName('main')[0])
+
+    document.addEventListener( 'click', (e) => {
+        if (e.target.id === 'modal')
+            document.getElementsByTagName('body')[0].removeChild(modal)
+    })
 }
