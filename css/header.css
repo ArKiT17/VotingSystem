@@ -60,7 +60,7 @@ img.btn.exit {
 
 img.btn.add-vote {
     background: var(--layout-bg-main-color);
-    background: var(--button-gradient);
+    background: var(--enable-button-gradient);
 }
 
 img.btn.clock {

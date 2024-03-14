@@ -55,11 +55,11 @@
 }
 
 #button-yes {
-    background: var(--layout-bg-main-color);
-    background: var(--button-gradient);
+    background: var(--enable-button-color);
+    background: var(--enable-button-gradient);
 }
 
 #button-no {
-    background: rgb(234,231,220);
-    background: linear-gradient(135deg, rgba(234,231,220,1) 0%, rgba(128,128,128,1) 100%);
+    background: var(--disable-button-color);
+    background: var(--disable-button-gradient);
 }

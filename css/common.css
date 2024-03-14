@@ -3,7 +3,10 @@
     --present-color: #EAE7DC;
     --layout-bg-main-color: #F1E1A6;
     --layout-bg-main-gradient: radial-gradient(circle, rgba(241,225,166,1) 0%, rgba(216,195,165,1) 100%);
-    --button-gradient: linear-gradient(135deg, rgba(241,225,166,1) 0%, rgba(232,90,79,1) 100%);
+    --enable-button-color: #F1E1A6;
+    --enable-button-gradient: linear-gradient(135deg, rgba(241,225,166,1) 0%, rgba(232,90,79,1) 100%);
+    --disable-button-color: rgb(234,231,220);
+    --disable-button-gradient: linear-gradient(135deg, rgba(234,231,220,1) 0%, rgba(128,128,128,1) 100%);
     --layout-text-color-light: #E85A4F;
     --text-color-count-votes: #E98074;
     --layout-text-color-dark: #72716e;
