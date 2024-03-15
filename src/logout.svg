@@ -1,9 +1,9 @@
 <svg width="89" height="89" viewBox="0 0 89 89" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="31.03" y1="13" x2="31.03" y2="27.7654" stroke="#EAE7DC" stroke-width="3"/>
-<path d="M58.5 14.5L29.5301 14.5" stroke="#EAE7DC" stroke-width="3"/>
-<line y1="-1.5" x2="14.7665" y2="-1.5" transform="matrix(0 -1 -0.99981 0.0194977 29.53 76)" stroke="#EAE7DC" stroke-width="3"/>
-<path d="M58.5 74.4991L29.5554 74.4992" stroke="#EAE7DC" stroke-width="3"/>
-<line x1="60.4987" y1="13" x2="60.4987" y2="75.9989" stroke="#EAE7DC" stroke-width="5"/>
-<path d="M29.0301 54.1442L13.9502 44.8121L29.0301 35.4799L29.0301 54.1442Z" fill="#EAE7DC" stroke="#EAE7DC"/>
-<rect x="29" y="39" width="20" height="11" fill="#EAE7DC"/>
+<line x1="31.03" y1="13" x2="31.03" y2="27.7654" stroke="white" stroke-width="3"/>
+<path d="M58.5 14.5L29.5301 14.5" stroke="white" stroke-width="3"/>
+<line y1="-1.5" x2="14.7665" y2="-1.5" transform="matrix(0 -1 -0.99981 0.0194977 29.53 76)" stroke="white" stroke-width="3"/>
+<path d="M58.5 74.4991L29.5554 74.4992" stroke="white" stroke-width="3"/>
+<line x1="60.4987" y1="13" x2="60.4987" y2="75.9989" stroke="white" stroke-width="5"/>
+<path d="M29.0301 54.1442L13.9502 44.8121L29.0301 35.4799L29.0301 54.1442Z" fill="white" stroke="white"/>
+<rect x="29" y="39" width="20" height="11" fill="white"/>
 </svg>
