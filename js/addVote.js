@@ -38,6 +38,7 @@ function addCandidate() {
     newCandidate.appendChild(labelPhoto)
     let inputPhoto = document.createElement('input')
     inputPhoto.type = 'file'
+    inputPhoto.accept = '.jpeg, .jpg, .png'
     inputPhoto.id = `photo${countCandidates}`
     inputPhoto.name = `photo${countCandidates}`
     inputPhoto.required = true
