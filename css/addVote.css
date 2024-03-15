@@ -4,4 +4,142 @@
 main {
     height: calc(100vh - 142px);
     margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: #FFFAEA;
+    width: 80%;
+    height: 80%;
+    padding: 40px 40px 20px;
+    display: grid;
+    grid-template:
+            "left col right"
+            "button button button";
+    border-radius: 15px;
+    border: 10px solid var(--layout-bg-main-color);
+    grid-template-columns: calc(50% - 41px) 82px calc(50% - 41px);
+    grid-template-rows: 88% 12%;
+}
+
+.left {
+    grid-area: left;
+    margin-top: 50px;
+}
+
+label {
+    display: block;
+    font-family: var(--font-style-cyrillic);
+    font-size: 1.4em;
+    margin-bottom: 16px;
+    margin-left: 8px;
+}
+
+input[type='text'], textarea, input[type='datetime-local'] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 20px;
+    background-color: var(--color-light-grey);
+    outline: none;
+    resize: none;
+    margin-bottom: 16px;
+}
+
+hr {
+    border: 2px solid var(--layout-bg-main-color);
+}
+
+.right {
+    height: 100%;
+    grid-area: right;
+    position: relative;
+}
+
+.right .candidate-control {
+    margin: 5px 0;
+    display: flex;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.right h3 {
+    text-align: center;
+    color: var(--layout-text-color-light);
+    font-family: var(--font-style-cyrillic);
+    font-weight: normal;
+    font-size: 2em;
+    margin: 0;
+}
+
+.right #candidates {
+    overflow-y: scroll;
+    height: 85%;
+}
+
+.right #candidates > div {
+    margin-bottom: 16px;
+    background-color: #E3E3E3;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+}
+
+.right input[type='text'] {
+    background-color: white;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.right input[type='file'] {
+    color: white;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    background: var(--enable-button-color);
+    background: var(--enable-button-gradient);
+}
+
+.right label {
+    font-size: 1.2em;
+    margin-bottom: 6px;
+}
+
+.right #candidates .btn {
+    position: absolute;
+    right: 5px;
+    bottom: 15px;
+    height: 20%;
+}
+
+button[type='submit'] {
+    grid-area: button;
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 6px 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px auto 0;
+    background: var(--enable-button-color);
+    background: var(--enable-button-gradient);
+}
+
+button[type='submit']:hover {
+    scale: 1.05;
+}
+
+button[type='submit']:disabled {
+    background: var(--disable-button-color);
+    background: var(--disable-button-gradient);
+    scale: 1;
+    cursor: not-allowed;
 }

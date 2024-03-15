@@ -22,13 +22,13 @@ function addCandidate() {
 
     let labelDesc = document.createElement('label')
     labelDesc.htmlFor = `desc${countCandidates}`
-    labelDesc.innerHTML = 'Короткий опис (максимум 30 символів)'
+    labelDesc.innerHTML = 'Опис'
     newCandidate.appendChild(labelDesc)
     let inputDesc = document.createElement('input')
     inputDesc.type = 'text'
+    inputDesc.placeholder = '*Максимум 30 символів'
     inputDesc.id = `desc${countCandidates}`
     inputDesc.name = `desc${countCandidates}`
-    inputDesc.required = true
     inputDesc.maxLength = 30
     newCandidate.appendChild(inputDesc)
 
@@ -43,13 +43,27 @@ function addCandidate() {
     inputPhoto.required = true
     newCandidate.appendChild(inputPhoto)
 
-    let button = document.createElement('button')
-    button.type = 'button'
-    button.onclick = function () { candidates.removeChild(newCandidate) }
-    button.innerHTML = 'X'
+    let button = document.createElement('img')
+    button.className = 'btn add-vote'
+    button.src = '../src/close.svg'
+    button.alt = 'Видалити'
+    button.onclick = function () {
+        candidates.removeChild(newCandidate)
+        checkCount()
+    }
     newCandidate.appendChild(button)
 
     candidates.appendChild(newCandidate)
+    checkCount()
+}
+
+function checkCount() {
+    for (const button of document.getElementsByTagName('button')) {
+        if (button.type === 'submit') {
+            button.disabled = document.getElementById('candidates').children.length < 2;
+            return
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
