@@ -7,12 +7,12 @@ $headers = array(
     'voted.php' => 'Проголосовані',
     'archive.php' => 'Архів'
 );
-if ($path == 'vote.php') {
+if ($path == 'vote.php' || $path == 'archiveVote.php') {
     $result = $mysqli->query("select `name` from `voting` where `id` = {$_GET['id']}"); //OK
     if ($result)
-        $headers['vote.php'] = $result->fetch_assoc()['name'];
+        $headers[$path] = $result->fetch_assoc()['name'];
     else
-        $headers['vote.php'] = 'SQL Error';
+        $headers[$path] = 'SQL Error';
 }
 ?>
 <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">

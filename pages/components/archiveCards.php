@@ -14,7 +14,7 @@
         echo "<img src='$imageDataUri' alt='{$row['candidateName']}'>";
         echo "<h5 class='title-winner'>Переможець</h5>";
         echo "<h5 class='winner'>" . $row['candidateName'] . "</h5>";
-        echo "<h5 class='vote-count'>{$row['voteCount']} голосів</h5>";
+        echo "<h5 class='vote-count'>Голосів: {$row['voteCount']}</h5>";
         echo "</div>";
     }
 

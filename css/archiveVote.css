@@ -1,0 +1,96 @@
+@import "header.css";
+@import "footer.css";
+
+main {
+    min-height: calc(100vh - 142px);
+    margin-top: 90px;
+    width: 100%;
+    background-color: #E8D3B5;
+}
+
+header, footer {
+    background-color: var(--present-color);
+}
+
+.winner-space, .lose-space {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.winner-box *, .candidate * {
+    margin: 0 0 10px;
+    cursor: default;
+}
+
+.winner-box {
+    background-color: #D8C3A5;
+    width: 30%;
+    margin: 25px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.winner-box img {
+    height: 40vh;
+    border-radius: 15px;
+    width: 74%;
+    object-fit: cover;
+    margin: 0 13% 10px;
+}
+
+.winner-box .title-winner {
+    color: var(--layout-text-color-light);
+    font-size: 26px;
+    font-family: var(--font-style-cyrillic);
+    font-weight: bold;
+}
+
+.winner-name, .winner-box .vote-count {
+    font-family: var(--font-style-cyrillic);
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.winner-name {
+    color: white;
+}
+
+.winner-box .vote-count {
+    color: var(--text-color-count-votes);
+}
+
+.lose-space {
+    padding: 0 50px 25px;
+    gap: 49px;
+    flex-wrap: wrap;
+
+}
+.candidate {
+    background-color: #FFFAEA;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px;
+    border-radius: 15px;
+}
+
+.candidate img {
+    width: 74%;
+    height: 30vh;
+    max-height: 200px;
+    object-fit: cover;
+    margin: 0 13%;
+    border-radius: 15px;
+}
+
+.candidate-name, .candidate .vote-count {
+    font-family: var(--font-style-cyrillic);
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--layout-text-color-light);
+}
