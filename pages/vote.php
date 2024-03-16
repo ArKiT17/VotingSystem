@@ -30,8 +30,9 @@ if ((int)$result->fetch_assoc()['c'] == 0) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Голосування</title>
     <link rel='stylesheet' href='../css/openVote.css'>
+    <link rel="icon" type="image/x-icon" href="../src/logo.png" />
+    <title>Голосування</title>
 </head>
 <body>
 <?php include "./components/header.php" ?>
