@@ -26,10 +26,10 @@ function addCandidate() {
     newCandidate.appendChild(labelDesc)
     let inputDesc = document.createElement('input')
     inputDesc.type = 'text'
-    inputDesc.placeholder = '*Максимум 30 символів'
+    inputDesc.placeholder = '*Максимум 100 символів'
     inputDesc.id = `desc${countCandidates}`
     inputDesc.name = `desc${countCandidates}`
-    inputDesc.maxLength = 30
+    inputDesc.maxLength = 100
     newCandidate.appendChild(inputDesc)
 
     let labelPhoto = document.createElement('label')

@@ -28,15 +28,15 @@ $result = $mysqli->query($query);
 if (!$result)
     die("Error in SQL query: " . $mysqli->error);
 $lastVoteId = $result->fetch_assoc()['maxId'];
-$cName = $_POST['name1'];
-$cDesc = $_POST['desc1'];
+$cName = mysqli_real_escape_string($mysqli, $_POST['name1']);
+$cDesc = mysqli_real_escape_string($mysqli, $_POST['desc1']);
 $cPhoto = file_get_contents($_FILES['photo1']['tmp_name']);
 $cPhoto = $mysqli->real_escape_string($cPhoto);
 $query = "insert into candidate (voitingId, name, description, photo) values ($lastVoteId, '$cName', '$cDesc', '$cPhoto')";
 $cNumber = 2;
 while ($_POST["name$cNumber"]) {
-    $cName = $_POST["name$cNumber"];
-    $cDesc = $_POST["desc$cNumber"];
+    $cName = mysqli_real_escape_string($mysqli, $_POST["name$cNumber"]);
+    $cDesc = mysqli_real_escape_string($mysqli, $_POST["desc$cNumber"]);
     $cPhoto = file_get_contents($_FILES["photo$cNumber"]['tmp_name']);
     $cPhoto = $mysqli->real_escape_string($cPhoto);
     $query .= ", ($lastVoteId, '$cName', '$cDesc', '$cPhoto')";

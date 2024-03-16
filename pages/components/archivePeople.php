@@ -20,7 +20,7 @@ if ($row = $result->fetch_assoc()) {
 }
 echo "</div>";
 
-$result = $mysqli->query("select candidate.photo, candidate.name, tmp.voteCount from candidate join (select userVotes.chosenCandidateId, count(*) as voteCount from userVotes join voting on voting.id = userVotes.votingId where voting.id = $voteId and userVotes.chosenCandidateId != voting.vinnerId group by userVotes.chosenCandidateId) as tmp on candidate.id = tmp.chosenCandidateId order by tmp.voteCount desc");
+$result = $mysqli->query("select candidate.photo, candidate.name, tmp.voteCount from candidate left join (select userVotes.chosenCandidateId, count(*) as voteCount from userVotes join voting on voting.id = userVotes.votingId where voting.id = $voteId and userVotes.chosenCandidateId != voting.vinnerId group by userVotes.chosenCandidateId) as tmp on candidate.id = tmp.chosenCandidateId join voting on candidate.voitingId = voting.id where candidate.voitingId = $voteId and candidate.id != voting.vinnerId order by tmp.voteCount desc");
 if (!$result) {
     die("Error in SQL query: " . $mysqli->error);
 }
@@ -30,7 +30,8 @@ while ($row = $result->fetch_assoc()) {
     $imageDataUri = 'data:image/jpeg;base64,' . base64_encode($row['photo']);
     echo "<img src='$imageDataUri' alt='{$row['name']}'/>";
     echo "<h5 class='candidate-name'>" . $row['name'] . "</h5>";
-    echo "<h5 class='vote-count'>Голосів: {$row['voteCount']}</h5>";
+    $votes = !$row['voteCount'] ? 0 : $row['voteCount'];
+    echo "<h5 class='vote-count'>Голосів: $votes</h5>";
     echo "</div>";
 }
 echo "</div>";

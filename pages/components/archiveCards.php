@@ -13,7 +13,7 @@
         $imageDataUri = 'data:image/jpeg;base64,' . base64_encode($row['photo']);
         echo "<img src='$imageDataUri' alt='{$row['candidateName']}'>";
         echo "<h5 class='title-winner'>Переможець</h5>";
-        echo "<h5 class='winner'>" . $row['candidateName'] . "</h5>";
+        echo "<h5 class='winner-name'>" . $row['candidateName'] . "</h5>";
         echo "<h5 class='vote-count'>Голосів: {$row['voteCount']}</h5>";
         echo "</div>";
     }
