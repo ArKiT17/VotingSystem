@@ -3,7 +3,7 @@
     global $mysqli;
     include "../php/dbConnect.php";
 
-    $result = $mysqli->query("select voting.id as votingId, voting.name as votingName, candidate.photo, candidate.name as candidateName, tmp.voteCount from voting join (select votingId, count(*) as voteCount from userVotes join voting on voting.id = userVotes.votingId where userVotes.chosenCandidateId = voting.vinnerId group by votingId) as tmp on tmp.votingId = voting.id join candidate on candidate.id = voting.vinnerId join userVotes on userVotes.votingId = voting.id where userVotes.userLogin like '{$_SESSION['login']}' group by voting.id, voting.name, candidate.photo, candidate.name;");
+    $result = $mysqli->query("select voting.id as votingId, voting.name as votingName, candidate.photo, candidate.name as candidateName, tmp.voteCount from voting join (select votingId, count(*) as voteCount from userVotes join voting on voting.id = userVotes.votingId where userVotes.chosenCandidateId = voting.winnerId group by votingId) as tmp on tmp.votingId = voting.id join candidate on candidate.id = voting.winnerId join userVotes on userVotes.votingId = voting.id where userVotes.userLogin like '{$_SESSION['login']}' group by voting.id, voting.name, candidate.photo, candidate.name;");
     if (!$result) {
         die("Error in SQL query: " . $mysqli->error);
     }

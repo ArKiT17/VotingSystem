@@ -4,9 +4,9 @@
     include "../php/dbConnect.php";
 
     if ($isVoted)
-        $result = $mysqli->query("select candidate.id, candidate.name, candidate.description, candidate.photo, userVotes.chosenCandidateId from candidate join voting on voting.id = candidate.voitingId join userVotes on voting.id = userVotes.votingId where voting.id = $voteId and userLogin like '{$_SESSION['login']}';");
+        $result = $mysqli->query("select candidate.id, candidate.name, candidate.description, candidate.photo, userVotes.chosenCandidateId from candidate join voting on voting.id = candidate.votingId join userVotes on voting.id = userVotes.votingId where voting.id = $voteId and userLogin like '{$_SESSION['login']}';");
     else
-        $result = $mysqli->query("select id, name, description, photo from candidate where voitingId = $voteId");
+        $result = $mysqli->query("select id, name, description, photo from candidate where votingId = $voteId");
     if (!$result) {
         die("Error in SQL query: " . $mysqli->error);
     }

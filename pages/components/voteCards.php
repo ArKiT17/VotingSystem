@@ -8,10 +8,10 @@
     $dateTime = $currentDateTime->format("Y-m-d H:i:s");
     $path = pathinfo(parse_url($_SERVER['REQUEST_URI'])['path'], PATHINFO_BASENAME);
     if ($path == 'voted.php') {
-        $result = $mysqli->query("select voting.id, voting.name, voting.description, count(*) as people, voting.endTime from voting join userVotes on voting.id = userVotes.votingId join candidate on candidate.voitingId = voting.id where userLogin like '{$_SESSION['login']}' and isVoted = 1 and vinnerId is null group by voting.id, voting.name, voting.description, voting.endTime");
+        $result = $mysqli->query("select voting.id, voting.name, voting.description, count(*) as people, voting.endTime from voting join userVotes on voting.id = userVotes.votingId join candidate on candidate.votingId = voting.id where userLogin like '{$_SESSION['login']}' and winnerId is null group by voting.id, voting.name, voting.description, voting.endTime");
         $action = 'openVoted';
     } else {
-        $result = $mysqli->query("select voting.id, voting.name, voting.description, count(*) as people, voting.endTime from voting join candidate on candidate.voitingId = voting.id where endTime > '$dateTime' and voting.id not in (select votingId from userVotes where userLogin like '{$_SESSION['login']}' and isVoted = 1) group by voting.id, voting.name, voting.description, voting.endTime");
+        $result = $mysqli->query("select voting.id, voting.name, voting.description, count(*) as people, voting.endTime from voting join candidate on candidate.votingId = voting.id where endTime > '$dateTime' and voting.id not in (select votingId from userVotes where userLogin like '{$_SESSION['login']}') group by voting.id, voting.name, voting.description, voting.endTime");
         $action = 'openVote';
     }
     if (!$result) {

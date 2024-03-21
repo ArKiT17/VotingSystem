@@ -9,7 +9,7 @@ include "../php/dbConnect.php";
 $voteId = $_GET['id'];
 $isVoted = (int)$_GET['v'];
 if ($isVoted)
-    $result = $mysqli->query("select count(*) as c from userVotes where userLogin like '{$_SESSION['login']}' and votingId = $voteId and isVoted = 1");
+    $result = $mysqli->query("select count(*) as c from userVotes where userLogin like '{$_SESSION['login']}' and votingId = $voteId");
 else
     $result = $mysqli->query("select count(*) as c from voting where id = $voteId and id not in (select votingId from userVotes where userLogin like '{$_SESSION['login']}')");
 if (!$result)

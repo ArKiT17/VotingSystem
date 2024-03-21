@@ -32,7 +32,7 @@ $cName = mysqli_real_escape_string($mysqli, $_POST['name1']);
 $cDesc = mysqli_real_escape_string($mysqli, $_POST['desc1']);
 $cPhoto = file_get_contents($_FILES['photo1']['tmp_name']);
 $cPhoto = $mysqli->real_escape_string($cPhoto);
-$query = "insert into candidate (voitingId, name, description, photo) values ($lastVoteId, '$cName', '$cDesc', '$cPhoto')";
+$query = "insert into candidate (votingId, name, description, photo) values ($lastVoteId, '$cName', '$cDesc', '$cPhoto')";
 $cNumber = 2;
 while ($_POST["name$cNumber"]) {
     $cName = mysqli_real_escape_string($mysqli, $_POST["name$cNumber"]);

@@ -7,7 +7,7 @@ if (!$_SESSION['login']) {
 global $mysqli;
 include "../php/dbConnect.php";
 $voteId = (int)$_GET['id'];
-$result = $mysqli->query("select count(*) as c from voting where id = $voteId and vinnerId is not null");
+$result = $mysqli->query("select count(*) as c from voting where id = $voteId and winnerId is not null");
 if (!$result)
     die("Error in SQL query: {$mysqli->error}");
 

@@ -2,7 +2,7 @@
 global $mysqli;
 include "../php/dbConnect.php";
 
-$result = $mysqli->query("select candidate.photo, candidate.name, tmp.voteCount from candidate join (select userVotes.chosenCandidateId, count(*) as voteCount from userVotes join voting on voting.id = userVotes.votingId where voting.id = $voteId and userVotes.chosenCandidateId = voting.vinnerId group by userVotes.chosenCandidateId) as tmp on candidate.id = tmp.chosenCandidateId");
+$result = $mysqli->query("select candidate.photo, candidate.name, tmp.voteCount from candidate join (select userVotes.chosenCandidateId, count(*) as voteCount from userVotes join voting on voting.id = userVotes.votingId where voting.id = $voteId and userVotes.chosenCandidateId = voting.winnerId group by userVotes.chosenCandidateId) as tmp on candidate.id = tmp.chosenCandidateId");
 if (!$result) {
     die("Error in SQL query: " . $mysqli->error);
 }
@@ -20,7 +20,7 @@ if ($row = $result->fetch_assoc()) {
 }
 echo "</div>";
 
-$result = $mysqli->query("select candidate.photo, candidate.name, tmp.voteCount from candidate left join (select userVotes.chosenCandidateId, count(*) as voteCount from userVotes join voting on voting.id = userVotes.votingId where voting.id = $voteId and userVotes.chosenCandidateId != voting.vinnerId group by userVotes.chosenCandidateId) as tmp on candidate.id = tmp.chosenCandidateId join voting on candidate.voitingId = voting.id where candidate.voitingId = $voteId and candidate.id != voting.vinnerId order by tmp.voteCount desc");
+$result = $mysqli->query("select candidate.photo, candidate.name, tmp.voteCount from candidate left join (select userVotes.chosenCandidateId, count(*) as voteCount from userVotes join voting on voting.id = userVotes.votingId where voting.id = $voteId and userVotes.chosenCandidateId != voting.winnerId group by userVotes.chosenCandidateId) as tmp on candidate.id = tmp.chosenCandidateId join voting on candidate.votingId = voting.id where candidate.votingId = $voteId and candidate.id != voting.winnerId order by tmp.voteCount desc");
 if (!$result) {
     die("Error in SQL query: " . $mysqli->error);
 }
